@@ -990,7 +990,7 @@
         return;
       }
 
-      var hour = this.hour,
+      var hour = this.hour.toString().length === 1 ? '0' + this.hour : this.hour,
           minute = this.minute.toString().length === 1 ? '0' + this.minute : this.minute,
           second = this.second.toString().length === 1 ? '0' + this.second : this.second;
 
@@ -1005,7 +1005,7 @@
           this.$widget.find('input.bootstrap-timepicker-meridian').val(this.meridian);
         }
       } else {
-        this.$widget.find('span.bootstrap-timepicker-hour').text( ('' + hour).length < 2 ? '0' : '') +  hour);
+        this.$widget.find('span.bootstrap-timepicker-hour').text(hour);
         this.$widget.find('span.bootstrap-timepicker-minute').text(minute);
 
         if (this.showSeconds) {
