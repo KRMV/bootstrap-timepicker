@@ -1005,7 +1005,7 @@
           this.$widget.find('input.bootstrap-timepicker-meridian').val(this.meridian);
         }
       } else {
-        this.$widget.find('span.bootstrap-timepicker-hour').text(hour);
+        this.$widget.find('span.bootstrap-timepicker-hour').text( ('' + hour).length < 2 ? '0' : '') +  hour);
         this.$widget.find('span.bootstrap-timepicker-minute').text(minute);
 
         if (this.showSeconds) {
