@@ -11,7 +11,7 @@
         "less/bootstrap-timepicker.less"
     ],
     "dependencies": {
-        "bootstrap": "~3.0",
+        "bootstrap": "*",
         "jquery": "~2.0"
     },
     "devDependencies": {
